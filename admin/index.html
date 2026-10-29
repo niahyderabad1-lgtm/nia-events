@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>NIA Hyderabad Leads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#041C43;--blue:#3E96DB;--orange:#EF7622;--mercury:#E0E0E0;--bg:#F3F4F7;--card:#fff;--ink:#16202F;--muted:#5D6B80;--line:#E3E7EE;--red:#C9372C;--green:#1E8E3E;--amber:#B26A00}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Lato,system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:15px}
+h1,h2,h3,.pop{font-family:Poppins,system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.hidden{display:none!important}
+.top{background:var(--navy);color:#fff;padding:12px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:20}
+.top svg.logo{height:26px;width:auto}
+.top .t{font-family:Poppins;font-weight:600;font-size:15px;border-left:1px solid rgba(255,255,255,.35);padding-left:14px}
+.top .sp{flex:1}
+.top .me{font-size:13px;opacity:.8}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 14px;font-family:Poppins;font-weight:600;font-size:13px;white-space:nowrap;text-decoration:none;color:var(--ink)}
+.btn:hover{border-color:#C7CED9}
+.btn.pri{background:var(--orange);border-color:var(--orange);color:#fff}
+.btn.navy{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.35);color:#fff}
+.btn.sm{padding:6px 10px;font-size:12px;border-radius:8px}
+.btn.wa{background:#1FA855;border-color:#1FA855;color:#fff}
+.btn[disabled]{opacity:.55;pointer-events:none}
+main{max-width:1280px;margin:0 auto;padding:20px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;text-align:left}
+.kpi b{display:block;font-family:Poppins;font-size:26px;color:var(--navy);line-height:1.1}
+.kpi span{font-size:12.5px;color:var(--muted)}
+.kpi.warn b{color:var(--red)}
+.kpi.on{outline:2px solid var(--blue)}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.tabs{display:flex;background:#fff;border:1px solid var(--line);border-radius:10px;padding:3px}
+.tabs button{border:0;background:none;padding:7px 14px;border-radius:8px;font-family:Poppins;font-weight:600;font-size:13px;color:var(--muted)}
+.tabs button.on{background:var(--navy);color:#fff}
+.bar input[type=search],.bar select{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;font-size:14px}
+.bar input[type=search]{min-width:220px;flex:1}
+.list{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.row{display:grid;grid-template-columns:1.6fr 1.3fr 1fr .9fr 1.1fr 1fr;gap:12px;align-items:center;padding:12px 16px;border-top:1px solid var(--line);cursor:pointer}
+.row:hover{background:#F8FAFD}
+.row.head{border-top:0;background:#F7F8FB;font-family:Poppins;font-weight:600;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;cursor:default}
+.row .nm{font-weight:700}
+.row .sub{font-size:12.5px;color:var(--muted);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;font-family:Poppins;white-space:nowrap}
+.s-New{background:#E7F1FB;color:#1D5F99}.s-Contacted{background:#FFF1E2;color:#A34E07}.s-Qualified{background:#EEE8FB;color:#5B3BA8}
+.s-Attended{background:#E3F4F5;color:#13676D}.s-Joined{background:#E5F5EA;color:var(--green)}.s-Not-interested{background:#EEF0F3;color:#5D6B80}
+.p-Paid{background:#E5F5EA;color:var(--green)}.p-Not-paid{background:#FDECEA;color:var(--red)}.p-Refunded,.p-Not-applicable{background:#EEF0F3;color:#5D6B80}
+.due{font-size:13px}.due.over{color:var(--red);font-weight:700}.due.today{color:var(--amber);font-weight:700}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+.group{padding:10px 16px;background:#F7F8FB;border-top:1px solid var(--line);font-family:Poppins;font-weight:600;font-size:13px;color:var(--navy)}
+.group.over{color:var(--red)}
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(4,28,67,.35);z-index:30}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:#fff;z-index:31;display:flex;flex-direction:column;box-shadow:-20px 0 50px rgba(4,28,67,.18)}
+.dh{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:flex-start}
+.dh h2{margin:0;font-size:20px;color:var(--navy)}
+.dh .meta{font-size:13px;color:var(--muted);margin-top:4px}
+.dh .x{margin-left:auto;border:0;background:#F1F3F7;border-radius:8px;width:34px;height:34px;font-size:18px}
+.db{overflow:auto;padding:18px 20px;flex:1}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em}
+.f input,.f select,.f textarea{width:100%;border:1px solid #D5DAE3;border-radius:9px;padding:9px 11px;background:#fff;font-size:14px}
+.f textarea{min-height:76px;resize:vertical}
+.sec{margin:20px 0 10px;font-family:Poppins;font-weight:600;font-size:14px;color:var(--navy);display:flex;align-items:center;gap:8px}
+.info{display:grid;grid-template-columns:130px 1fr;gap:6px 12px;font-size:14px}
+.info dt{color:var(--muted)}.info dd{margin:0;word-break:break-word}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{border-left:2px solid var(--line);padding:0 0 14px 16px;position:relative}
+.tl li:before{content:"";position:absolute;left:-6px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--blue)}
+.tl li.k-Status:before,.tl li.k-Payment:before{background:var(--orange)}
+.tl li.k-System:before{background:#B7C0CD}
+.tl .w{font-size:12px;color:var(--muted)}
+.tl .b{white-space:pre-wrap;margin-top:2px}
+.saved{font-size:12px;color:var(--green);font-weight:700;margin-left:auto}
+/* modal */
+.modal{position:fixed;inset:0;display:grid;place-items:center;z-index:40;background:rgba(4,28,67,.45);padding:16px}
+.mc{background:#fff;border-radius:16px;width:min(620px,100%);max-height:90vh;overflow:auto;padding:22px}
+.mc h3{margin:0 0 12px;color:var(--navy)}
+.mc .foot{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.tpl{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+.tpl b{font-family:Poppins;font-size:13px;color:var(--navy)}
+.tpl p{margin:6px 0 10px;font-size:13.5px;white-space:pre-wrap}
+table.mini{width:100%;border-collapse:collapse;font-size:13px}
+table.mini td,table.mini th{border-bottom:1px solid var(--line);padding:6px;text-align:left}
+/* login */
+.login{min-height:100vh;display:grid;place-items:center;background:radial-gradient(120% 80% at 70% 20%,#123a7a,#041C43 60%);padding:16px}
+.lc{background:#fff;border-radius:20px;padding:34px;width:min(420px,100%);box-shadow:0 30px 80px rgba(0,0,0,.3)}
+.lc svg{height:34px;width:auto;margin-bottom:18px}
+.lc svg use{filter:none}
+.lc .logo-dark{background:var(--navy);padding:10px 14px;border-radius:10px;height:54px}
+.lc h1{font-size:22px;margin:0 0 6px;color:var(--navy)}
+.lc p{color:var(--muted);margin:0 0 18px}
+.lc input{width:100%;border:1.5px solid #D5DAE3;border-radius:10px;padding:12px 14px;font-size:16px;margin-bottom:12px}
+.lc .btn{width:100%;padding:13px;font-size:15px}
+.msg{font-size:14px;margin-top:12px}
+.msg.err{color:var(--red)}.msg.ok{color:var(--green)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 18px;border-radius:10px;z-index:50;font-size:14px}
+@media (max-width:900px){
+ .kpis{grid-template-columns:repeat(3,1fr)}
+ .row{grid-template-columns:1fr auto;gap:4px 10px}
+ .row.head{display:none}
+ .row .c-bus,.row .c-src{display:none}
+ .row .c-st{grid-column:2;grid-row:1;justify-self:end}
+ .row .c-pay{grid-column:2;grid-row:2;justify-self:end}
+ .row .c-due{grid-column:1;grid-row:2}
+ .top .me{display:none}
+ main{padding:14px}
+ .grid{grid-template-columns:1fr}
+ .bar input[type=search]{min-width:100%}
+ .bar select{flex:1 1 45%;min-width:0}
+ .bar .btn{flex:1 1 auto}
+ .bar>div[style]{display:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="nia" viewBox="0 0 800 158"><path fill="#EF7622" d="M0.7 157.3C0.3 157.0 -0.0 122.1 0.0 79.8L0.0 2.8L22.2 3.2C47.6 3.6 51.7 4.5 61.7 12.0C71.0 19.1 75.8 27.0 98.2 71.8C120.0 115.6 124.3 122.5 130.0 123.2L132.5 123.5L132.8 63.2L133.0 3.0L150.0 3.0L167.0 3.0L166.8 80.2L166.5 157.5L149.5 157.8C122.3 158.2 113.3 155.9 102.4 145.7C93.6 137.5 89.2 129.9 66.5 84.5C55.7 62.8 45.7 43.8 43.8 41.7C41.8 39.4 39.2 37.8 37.2 37.4L34.0 36.8L34.0 97.4L34.0 158.0L17.7 158.0C8.7 158.0 1.0 157.7 0.7 157.3ZM198.0 80.5L198.0 3.0L215.0 3.0L232.0 3.0L232.0 80.5L232.0 158.0L215.0 158.0L198.0 158.0L198.0 80.5ZM263.0 99.8C263.0 53.7 263.3 40.4 264.4 36.4C270.7 12.8 294.8 -3.1 318.2 0.8C330.6 2.9 338.1 7.3 350.1 19.7C365.5 35.7 471.0 154.7 471.8 157.0C472.0 157.6 463.6 158.0 450.1 158.0L428.1 158.0L410.9 138.5L393.8 119.0L345.4 119.0L297.0 119.0L296.8 138.2L296.5 157.5L279.8 157.8L263.0 158.0L263.0 99.8ZM361.9 83.2C359.2 79.8 332.6 50.4 325.3 42.8C319.7 36.9 317.1 34.9 314.4 34.4C309.5 33.5 304.0 35.3 300.5 39.0L297.5 42.1L297.2 63.6L296.9 85.0L330.1 85.0C361.5 85.0 363.2 84.9 361.9 83.2Z"/><path fill="#fff" d="M628.4 120.1C626.1 119.1 623.0 116.5 621.4 114.5C616.1 107.5 617.2 94.7 623.7 88.8C629.0 84.0 638.6 82.7 645.6 85.9C651.2 88.4 651.8 89.7 648.7 92.8C646.2 95.3 646.1 95.3 643.4 93.6C637.8 89.9 630.3 91.7 627.5 97.5C625.6 101.7 625.6 104.3 627.6 108.5C630.5 114.7 637.3 116.2 644.2 112.2C646.7 110.7 647.1 110.8 649.0 112.5C651.8 115.0 651.5 116.1 647.4 118.9C642.5 122.3 634.1 122.8 628.4 120.1ZM728.4 120.1C720.6 116.6 716.2 107.4 718.2 98.8C722.5 79.3 751.5 79.3 755.8 98.8C758.5 110.8 749.5 122.0 737.0 122.0C734.5 122.0 730.6 121.1 728.4 120.1ZM493.0 103.0L493.0 85.0L497.0 85.0L501.0 85.0L501.0 103.0L501.0 121.0L497.0 121.0L493.0 121.0L493.0 103.0ZM513.5 103.0L513.5 85.0L517.5 85.0C521.4 85.1 521.7 85.4 529.5 95.7L537.5 106.3L537.8 95.7L538.1 85.0L542.0 85.0L546.0 85.0L546.0 103.1L546.0 121.1L542.3 120.8C538.9 120.5 538.0 119.7 530.6 109.8C526.1 103.9 522.3 99.1 522.0 99.1C521.7 99.0 521.6 103.9 521.8 110.0L522.1 121.0L517.8 121.0L513.5 121.0L513.5 103.0ZM578.2 111.2C580.4 105.9 583.9 97.7 585.9 93.0L589.6 84.5L593.4 84.5L597.2 84.5L604.6 102.0C608.7 111.6 612.0 119.8 612.0 120.2C612.0 120.7 610.2 121.0 608.1 121.0C604.5 121.0 604.1 120.7 602.6 117.0L601.0 113.0L593.2 113.0L585.3 113.0L584.0 117.0C582.7 120.8 582.5 121.0 578.4 121.0L574.1 121.0L578.2 111.2ZM670.0 106.5L670.0 92.0L664.5 92.0L659.0 92.0L659.0 88.5L659.0 85.0L674.0 85.0L689.0 85.0L689.0 88.5L689.0 92.0L683.5 92.0L678.0 92.0L678.0 106.5L678.0 121.0L674.0 121.0L670.0 121.0L670.0 106.5ZM699.0 103.0L699.0 85.0L703.0 85.0L707.0 85.0L707.0 103.0L707.0 121.0L703.0 121.0L699.0 121.0L699.0 103.0ZM767.0 103.0L767.0 85.0L770.9 85.0C774.7 85.0 775.0 85.3 782.6 95.5C786.9 101.3 790.8 106.0 791.3 106.0C791.7 106.0 792.0 101.3 791.8 95.5L791.5 85.0L795.8 85.0L800.0 85.0L800.0 103.0L800.0 121.0L796.1 121.0C792.4 121.0 792.0 120.7 783.9 109.9L775.5 98.8L775.2 109.9L774.9 121.0L771.0 121.0L767.0 121.0L767.0 103.0ZM741.5 113.6C747.4 111.1 749.8 102.9 746.3 97.0C742.1 89.8 731.2 89.9 727.4 97.2C724.6 102.7 726.4 110.4 731.2 112.7C736.4 115.3 737.2 115.4 741.5 113.6ZM598.0 105.6C598.0 105.4 596.9 102.8 595.6 99.9L593.2 94.5L591.1 99.3C589.9 102.0 589.0 104.6 589.0 105.1C589.0 105.6 591.0 106.0 593.5 106.0C596.0 106.0 598.0 105.8 598.0 105.6ZM444.0 46.6C444.0 29.2 444.1 28.0 445.9 28.0C447.1 28.0 451.6 32.9 458.6 42.0C464.6 49.6 469.8 55.9 470.2 56.0C470.7 56.0 471.0 49.7 471.0 42.0C471.0 28.7 471.1 28.0 473.0 28.0C474.9 28.0 475.0 28.7 475.0 45.9C475.0 57.3 474.6 64.1 474.0 64.5C472.4 65.5 470.7 63.8 458.9 48.7L448.1 34.9L447.8 49.7C447.5 62.8 447.3 64.5 445.8 64.8C444.1 65.1 444.0 63.7 444.0 46.6ZM488.7 64.3C488.3 64.0 488.0 55.6 488.0 45.8L488.0 28.0L501.6 28.0C514.0 28.0 515.1 28.2 514.8 29.7C514.5 31.3 513.0 31.5 503.2 31.8L492.0 32.1L492.0 38.0L492.0 44.0L502.0 44.0C511.3 44.0 512.0 44.1 512.0 46.0C512.0 47.9 511.3 48.0 502.0 48.0L491.9 48.0L492.2 54.2L492.5 60.5L503.8 60.8C514.2 61.0 515.0 61.2 515.0 63.0C515.0 64.9 514.3 65.0 502.2 65.0C495.1 65.0 489.0 64.7 488.7 64.3ZM536.7 64.3C536.3 64.0 536.0 56.5 536.0 47.8L536.0 32.0L530.0 32.0C524.7 32.0 524.0 31.8 524.0 30.0C524.0 28.1 524.7 28.0 538.6 28.0C551.9 28.0 553.1 28.1 552.8 29.8C552.5 31.2 551.2 31.6 546.2 31.8L540.0 32.1L540.0 48.5C540.0 61.6 539.7 65.0 538.7 65.0C537.9 65.0 537.0 64.7 536.7 64.3ZM573.5 63.8C573.3 63.1 570.6 55.5 567.6 47.0C564.6 38.5 561.9 30.7 561.5 29.7C560.9 28.4 561.3 28.0 563.1 28.0C565.3 28.0 565.9 29.3 570.4 42.5C573.1 50.5 575.5 57.0 575.9 57.0C576.2 57.0 578.5 50.5 581.0 42.7C584.8 31.1 586.0 28.4 587.6 28.2C589.4 27.9 590.2 29.7 594.5 43.1L599.3 58.3L604.5 43.4C608.9 30.9 610.1 28.4 611.9 28.2C613.0 28.0 614.0 28.0 614.0 28.2C614.0 28.5 611.1 36.7 607.6 46.6C599.4 69.4 599.3 69.5 592.8 51.0C590.2 43.6 588.0 37.1 587.7 36.5C587.5 36.0 585.1 42.1 582.4 50.0C578.8 60.6 577.0 64.6 575.7 64.8C574.8 65.0 573.8 64.6 573.5 63.8ZM633.0 63.9C624.2 60.2 619.6 50.0 622.5 40.3C626.3 27.5 642.3 22.8 652.0 31.6C665.0 43.4 658.3 63.8 641.2 64.7C638.0 64.8 634.4 64.5 633.0 63.9ZM671.0 46.6L671.0 28.0L681.4 28.0C690.5 28.0 692.1 28.3 695.1 30.3C702.0 34.9 701.3 44.6 693.8 48.0L690.0 49.7L695.5 57.0C698.5 61.0 701.0 64.5 701.0 64.7C701.0 64.9 700.0 65.0 698.7 65.0C697.0 65.0 695.0 63.1 690.9 57.5L685.5 50.1L680.3 50.0L675.1 50.0L674.8 57.2C674.6 63.2 674.2 64.5 672.8 64.8C671.1 65.1 671.0 63.7 671.0 46.6ZM712.0 46.5C712.0 28.7 712.1 28.0 714.0 28.0C715.9 28.0 716.0 28.7 716.0 38.8L716.1 49.5L726.5 38.8C734.8 30.3 737.6 28.0 739.7 28.0C742.3 28.0 741.9 28.6 734.6 35.9L726.7 43.9L734.1 53.2C743.7 65.1 743.6 65.0 740.7 65.0C738.5 65.0 734.9 61.0 724.3 47.1C724.1 46.8 722.2 48.4 720.0 50.5C716.3 54.1 716.0 54.8 716.0 59.7C716.0 64.3 715.7 65.0 714.0 65.0C712.1 65.0 712.0 64.3 712.0 46.5ZM647.7 59.0C657.0 53.4 656.3 37.2 646.6 32.6C636.7 27.9 626.0 34.9 626.0 46.0C626.0 54.8 631.8 61.0 640.0 61.0C642.7 61.0 645.8 60.2 647.7 59.0ZM693.5 43.5C694.9 42.2 696.0 40.1 696.0 39.0C696.0 37.9 694.9 35.8 693.5 34.5C691.3 32.3 690.3 32.0 683.0 32.0L675.0 32.0L675.0 39.0L675.0 46.0L683.0 46.0C690.3 46.0 691.3 45.7 693.5 43.5Z"/></symbol></svg>
+
+<!-- Login -->
+<section class="login hidden" id="login">
+<div class="lc">
+<svg viewBox="0 0 800 158" class="logo-dark"><use href="#nia"/></svg>
+<h1>Lead tracker</h1>
+<p>NIA Hyderabad admins only. Enter your email and we'll send you a sign-in link.</p>
+<form id="login-form"><input type="email" id="login-email" placeholder="you@example.com" required autocomplete="email">
+<button class="btn pri" id="login-btn">Email me a sign-in link</button></form>
+<div class="msg" id="login-msg"></div>
+</div>
+</section>
+
+<!-- App -->
+<div id="app" class="hidden">
+<header class="top">
+<svg class="logo" viewBox="0 0 800 158"><use href="#nia"/></svg>
+<div class="t">Lead tracker</div>
+<div class="sp"></div>
+<span class="me" id="me"></span>
+<button class="btn ghost sm" id="btn-admins">Admins</button>
+<button class="btn ghost sm" id="btn-out">Sign out</button>
+</header>
+<main>
+<div class="kpis" id="kpis"></div>
+<div class="bar">
+<div class="tabs"><button data-view="follow" class="on">Follow-ups</button><button data-view="all">All leads</button></div>
+<input type="search" id="q" placeholder="Search name, phone, business, category">
+<select id="f-status"><option value="">All statuses</option></select>
+<select id="f-pay"><option value="">Any payment</option></select>
+<select id="f-event"><option value="">All events</option></select>
+<select id="f-source"><option value="">All sources</option></select>
+<div style="flex:1"></div>
+<button class="btn" id="btn-refresh" title="Refresh">↻</button>
+<button class="btn" id="btn-import">Import CSV</button>
+<button class="btn" id="btn-export">Export CSV</button>
+<button class="btn pri" id="btn-add">+ Add lead</button>
+</div>
+<div class="list" id="list"></div>
+</main>
+</div>
+
+<!-- Drawer -->
+<div class="scrim hidden" id="scrim"></div>
+<aside class="drawer hidden" id="drawer" aria-label="Lead details"></aside>
+<div id="modal-root"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+// ---------- Settings ----------
+const CONFIG = {
+  SUPABASE_URL: 'https://jtmvvcwzsddhcvuhllou.supabase.co',
+  SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp0bXZ2Y3d6c2RkaGN2dWhsbG91Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMyODEzMTQsImV4cCI6MjEwODg1NzMxNH0.ag-VzEfb6wXK1xShsMM7YmuAqgUGwdYQrmxsuTcJ0_I',
+  EVENTS: {
+    'NIA ATLAS 11 Nov 2026': { when: 'Wednesday 11 Nov, 6 PM (followed by dinner)', where: 'Novotel Convention Centre, HITEC City', pay: 'https://rzp.io/rzp/NIAHYDNOV26', fee: '₹2,600' }
+  }
+};
+const STATUSES = ['New','Contacted','Qualified','Attended','Joined','Not interested'];
+const PAYMENTS = ['Not paid','Paid','Refunded','Not applicable'];
+const SOURCES = ['Event page','Meta instant form','Referral','WhatsApp','Walk-in','Manus import','Other'];
+const CB_TYPES = ['Call','WhatsApp','Meeting','Email'];
+const KINDS = ['Note','Call','WhatsApp','Meeting','Email'];
+
+const sb = window.supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY);
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let state = { user: null, leads: [], admins: [], view: 'follow', kpi: '', openId: null };
+
+function toast(t){ const d=document.createElement('div'); d.className='toast'; d.textContent=t; document.body.appendChild(d); setTimeout(()=>d.remove(),2600); }
+function fail(e, what){ console.error(e); toast((what||'Something went wrong') + ': ' + (e?.message || e)); }
+function fmtDate(iso, withTime=true){ if(!iso) return ''; const d=new Date(iso); return d.toLocaleString('en-IN', withTime ? {day:'numeric',month:'short',hour:'numeric',minute:'2-digit'} : {day:'numeric',month:'short',year:'numeric'}); }
+function startOfDay(d){ const x=new Date(d); x.setHours(0,0,0,0); return x; }
+function dueClass(iso){ if(!iso) return ''; const t=new Date(iso), now=new Date(); if(t<now) return 'over'; if(t<new Date(startOfDay(now).getTime()+864e5)) return 'today'; return ''; }
+function digits(s){ return String(s||'').replace(/\D/g,''); }
+function waNumber(p){ let d=digits(p); if(d.length===10) d='91'+d; return d; }
+function toLocalInput(iso){ if(!iso) return ''; const d=new Date(iso); const p=n=>String(n).padStart(2,'0'); return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}`; }
+function firstName(n){ return String(n||'').trim().split(/\s+/)[0] || 'there'; }
+function cls(prefix, v){ return prefix + String(v).replace(/ /g,'-'); }
+
+// ---------- Auth ----------
+async function boot(){
+  const { data:{ session } } = await sb.auth.getSession();
+  sb.auth.onAuthStateChange((_e, s) => { if (s?.user && !state.user) enter(s.user); if (!s) showLogin(); });
+  if (session?.user) enter(session.user); else showLogin();
+}
+function showLogin(){ state.user=null; $('#app').classList.add('hidden'); $('#login').classList.remove('hidden'); }
+$('#login-form').addEventListener('submit', async e => {
+  e.preventDefault(); const email=$('#login-email').value.trim().toLowerCase(); const m=$('#login-msg');
+  $('#login-btn').disabled=true; m.className='msg'; m.textContent='Sending…';
+  const { error } = await sb.auth.signInWithOtp({ email, options:{ emailRedirectTo: location.origin + location.pathname } });
+  $('#login-btn').disabled=false;
+  if (error){ m.className='msg err'; m.textContent=error.message; return; }
+  m.className='msg ok'; m.textContent='Check your inbox for the sign-in link (it can take a minute; check spam too).';
+});
+async function enter(user){
+  state.user=user;
+  const { data: ok, error } = await sb.rpc('is_admin');
+  if (error || !ok){
+    await sb.auth.signOut(); showLogin();
+    const m=$('#login-msg'); m.className='msg err'; m.textContent = error ? error.message : `${user.email} isn't on the admin list. Ask an existing admin to add you.`;
+    return;
+  }
+  if (location.hash.includes('access_token')) history.replaceState(null,'',location.pathname);
+  $('#login').classList.add('hidden'); $('#app').classList.remove('hidden');
+  $('#me').textContent=user.email;
+  await loadAll();
+}
+$('#btn-out').onclick = async () => { await sb.auth.signOut(); location.reload(); };
+
+// ---------- Data ----------
+async function loadAll(){
+  const [l, a] = await Promise.all([
+    sb.from('leads').select('*').order('created_at',{ascending:false}).limit(5000),
+    sb.from('admins').select('*').order('added_at')
+  ]);
+  if (l.error) return fail(l.error,'Could not load leads');
+  state.leads = l.data || []; state.admins = a.data || [];
+  fillFilters(); render();
+}
+async function updateLead(id, patch){
+  const { data, error } = await sb.from('leads').update(patch).eq('id', id).select().single();
+  if (error) { fail(error,'Not saved'); return null; }
+  const i = state.leads.findIndex(x=>x.id===id); if (i>=0) state.leads[i]=data;
+  render(); return data;
+}
+
+// ---------- Filters & list ----------
+function fillFilters(){
+  const set = (sel, vals) => { const el=$(sel), cur=el.value; el.length=1; vals.forEach(v=>el.add(new Option(v,v))); el.value=cur; };
+  set('#f-status', STATUSES); set('#f-pay', PAYMENTS);
+  set('#f-event', [...new Set(state.leads.map(l=>l.event).filter(Boolean))]);
+  set('#f-source', [...new Set([...SOURCES, ...state.leads.map(l=>l.source).filter(Boolean)])]);
+}
+['#q','#f-status','#f-pay','#f-event','#f-source'].forEach(s => $(s).addEventListener('input', render));
+document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { state.view=b.dataset.view; state.kpi=''; document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b)); render(); });
+$('#btn-refresh').onclick = loadAll;
+
+function filtered(){
+  const q=$('#q').value.trim().toLowerCase(), st=$('#f-status').value, pay=$('#f-pay').value, ev=$('#f-event').value, src=$('#f-source').value;
+  const qd = digits(q);
+  return state.leads.filter(l => {
+    if (st && l.status!==st) return false;
+    if (pay && l.payment_status!==pay) return false;
+    if (ev && l.event!==ev) return false;
+    if (src && l.source!==src) return false;
+    if (state.kpi && !KPI[state.kpi].test(l)) return false;
+    if (q){
+      const hay=[l.name,l.email,l.business,l.category,l.referred_by,l.assignee].join(' ').toLowerCase();
+      if (!hay.includes(q) && !(qd.length>=3 && digits(l.phone).includes(qd))) return false;
+    }
+    return true;
+  });
+}
+const open = l => !['Joined','Not interested'].includes(l.status);
+const KPI = {
+  total:   { label:'Total leads',          test: l => true },
+  fresh:   { label:'New, not contacted',   test: l => l.status==='New' },
+  overdue: { label:'Follow-ups overdue',   test: l => l.next_callback_at && new Date(l.next_callback_at) < new Date() && open(l), warn:true },
+  today:   { label:'Follow-ups today',     test: l => dueClass(l.next_callback_at)==='today' && open(l) },
+  unpaid:  { label:'Registered, not paid', test: l => l.event && l.payment_status==='Not paid' && open(l) },
+  joined:  { label:'Joined',               test: l => l.status==='Joined' },
+};
+function renderKpis(){
+  $('#kpis').innerHTML = Object.entries(KPI).map(([k,v]) => {
+    const n = state.leads.filter(v.test).length;
+    return `<button class="kpi ${v.warn&&n?'warn':''} ${state.kpi===k?'on':''}" data-k="${k}"><b>${n}</b><span>${v.label}</span></button>`;
+  }).join('');
+  document.querySelectorAll('.kpi').forEach(b => b.onclick = () => {
+    state.kpi = state.kpi===b.dataset.k ? '' : b.dataset.k;
+    if (state.kpi){ state.view='all'; document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x.dataset.view==='all')); }
+    render();
+  });
+}
+function rowHtml(l){
+  const dc = dueClass(l.next_callback_at);
+  const due = l.next_callback_at ? `<span class="due ${dc}">${dc==='over'?'Overdue · ':''}${esc(l.callback_type||'Call')} ${esc(fmtDate(l.next_callback_at))}</span>` : `<span class="due" style="color:var(--muted)">No follow-up set</span>`;
+  return `<div class="row" data-id="${l.id}">
+  <div><div class="nm">${esc(l.name)}</div><div class="sub">${esc(l.phone)}${l.email?' · '+esc(l.email):''}</div></div>
+  <div class="c-bus"><div>${esc(l.business||'—')}</div><div class="sub">${esc(l.category||'')}</div></div>
+  <div class="c-st"><span class="pill ${cls('s-',l.status)}">${esc(l.status)}</span></div>
+  <div class="c-pay">${l.event||l.payment_status!=='Not paid' ? `<span class="pill ${cls('p-',l.payment_status)}">${esc(l.payment_status)}</span>` : ''}</div>
+  <div class="c-due">${due}</div>
+  <div class="c-src"><div class="sub" style="margin:0">${esc(l.source||'')}${l.utm_content?' · '+esc(l.utm_content):''}</div><div class="sub">${esc(fmtDate(l.created_at,false))}</div></div>
+  </div>`;
+}
+const HEAD = `<div class="row head"><div>Name</div><div>Business</div><div>Status</div><div>Payment</div><div>Next follow-up</div><div>Source · added</div></div>`;
+function render(){
+  renderKpis();
+  const ls = filtered();
+  let html = '';
+  if (state.view==='follow' && !state.kpi){
+    const now=new Date(), eod=new Date(startOfDay(now).getTime()+864e5);
+    const act = ls.filter(open);
+    const groups = [
+      ['Overdue', act.filter(l=>l.next_callback_at && new Date(l.next_callback_at)<now).sort((a,b)=>new Date(a.next_callback_at)-new Date(b.next_callback_at)), 'over'],
+      ['Today', act.filter(l=>l.next_callback_at && new Date(l.next_callback_at)>=now && new Date(l.next_callback_at)<eod).sort((a,b)=>new Date(a.next_callback_at)-new Date(b.next_callback_at)), ''],
+      ['New leads with no follow-up yet', act.filter(l=>!l.next_callback_at && l.status==='New'), ''],
+      ['Upcoming', act.filter(l=>l.next_callback_at && new Date(l.next_callback_at)>=eod).sort((a,b)=>new Date(a.next_callback_at)-new Date(b.next_callback_at)), ''],
+    ];
+    html = HEAD + groups.map(([t, arr, c]) => arr.length ? `<div class="group ${c}">${t} · ${arr.length}</div>` + arr.map(rowHtml).join('') : '').join('');
+    if (!groups.some(g=>g[1].length)) html = `<div class="empty">Nothing to follow up. New sign-ups will appear here.</div>`;
+  } else {
+    html = ls.length ? HEAD + ls.map(rowHtml).join('') : `<div class="empty">No leads match these filters.</div>`;
+  }
+  $('#list').innerHTML = html;
+  document.querySelectorAll('.row[data-id]').forEach(r => r.onclick = () => openLead(r.dataset.id));
+}
+
+// ---------- Lead drawer ----------
+function closeDrawer(){ state.openId=null; $('#drawer').classList.add('hidden'); $('#scrim').classList.add('hidden'); }
+$('#scrim').onclick = closeDrawer;
+document.addEventListener('keydown', e => { if (e.key==='Escape'){ if ($('#modal-root').innerHTML) $('#modal-root').innerHTML=''; else closeDrawer(); } });
+const opts = (arr, cur, blank) => (blank?`<option value="">${blank}</option>`:'') + arr.map(v=>`<option ${v===cur?'selected':''} value="${esc(v)}">${esc(v)}</option>`).join('');
+
+async function openLead(id){
+  state.openId=id; const l = state.leads.find(x=>x.id===id); if (!l) return;
+  const adminOpts = state.admins.map(a=>a.name||a.email);
+  if (l.assignee && !adminOpts.includes(l.assignee)) adminOpts.push(l.assignee);
+  const d=$('#drawer');
+  d.innerHTML = `
+  <div class="dh"><div><h2>${esc(l.name)}</h2><div class="meta">${esc([l.business,l.category].filter(Boolean).join(' · ')||'—')}</div>
+  <div class="meta">Added ${esc(fmtDate(l.created_at))} · ${esc(l.source||'')}${l.event?' · '+esc(l.event):''}</div></div>
+  <button class="x" aria-label="Close">×</button></div>
+  <div class="db">
+   <div class="acts">
+    <a class="btn navy sm" href="tel:${esc(l.phone)}">Call ${esc(l.phone)}</a>
+    <button class="btn wa sm" id="d-wa">WhatsApp</button>
+    ${l.email?`<a class="btn sm" href="mailto:${esc(l.email)}">Email</a>`:''}
+    <button class="btn sm" id="d-edit">Edit details</button>
+   </div>
+   <div class="grid">
+    <div class="f"><label>Status</label><select id="d-status">${opts(STATUSES,l.status)}</select></div>
+    <div class="f"><label>Payment</label><select id="d-pay">${opts(PAYMENTS,l.payment_status)}</select></div>
+    <div class="f"><label>Next follow-up</label><input type="datetime-local" id="d-cb" value="${toLocalInput(l.next_callback_at)}"></div>
+    <div class="f"><label>Follow-up by</label><select id="d-cbt">${opts(CB_TYPES,l.callback_type||'Call')}</select></div>
+    <div class="f"><label>Assigned to</label><select id="d-asg">${opts(adminOpts,l.assignee,'Unassigned')}</select></div>
+    <div class="f" style="display:flex;align-items:flex-end;gap:8px"><button class="btn sm" id="d-cb-clear">Clear follow-up</button><span class="saved hidden" id="d-saved">Saved</span></div>
+   </div>
+   <div class="sec">Log an activity</div>
+   <div class="grid">
+    <div class="f"><label>Type</label><select id="n-kind">${opts(KINDS,'Call')}</select></div>
+    <div class="f"><label>Quick next step</label><select id="n-next"><option value="">Don't change follow-up</option><option value="1">Follow up tomorrow</option><option value="3">In 3 days</option><option value="7">In a week</option></select></div>
+   </div>
+   <div class="f" style="margin-top:10px"><textarea id="n-body" placeholder="What happened? e.g. Spoke to her, will pay by Friday"></textarea></div>
+   <div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn pri sm" id="n-save">Save activity</button></div>
+   <div class="sec">Details</div>
+   <dl class="info" id="d-info">
+    <dt>Phone</dt><dd>${esc(l.phone)}</dd><dt>Email</dt><dd>${esc(l.email||'—')}</dd>
+    <dt>Business</dt><dd>${esc(l.business||'—')}</dd><dt>Category</dt><dd>${esc(l.category||'—')}</dd>
+    <dt>Owner/founder</dt><dd>${esc(l.owner||'—')}</dd><dt>Heard via</dt><dd>${esc(l.heard||'—')}</dd>
+    <dt>Referred by</dt><dd>${esc(l.referred_by||'—')}</dd>
+    <dt>Ad tracking</dt><dd>${esc([l.utm_source,l.utm_campaign,l.utm_content].filter(Boolean).join(' / ')||'—')}</dd>
+   </dl>
+   <div class="sec">History</div>
+   <ul class="tl" id="d-tl"><li class="k-System"><div class="w">Loading…</div></li></ul>
+   <div style="margin-top:24px;text-align:right"><button class="btn sm" id="d-del" style="color:var(--red)">Delete lead</button></div>
+  </div>`;
+  d.classList.remove('hidden'); $('#scrim').classList.remove('hidden');
+  d.querySelector('.x').onclick = closeDrawer;
+  const flash = () => { const s=$('#d-saved'); s.classList.remove('hidden'); setTimeout(()=>s.classList.add('hidden'),1500); };
+  const save = async patch => { const r = await updateLead(id, patch); if (r){ flash(); loadTimeline(id); } };
+  $('#d-status').onchange = e => save({ status: e.target.value });
+  $('#d-pay').onchange = e => save({ payment_status: e.target.value });
+  $('#d-asg').onchange = e => save({ assignee: e.target.value || null });
+  $('#d-cbt').onchange = e => save({ callback_type: e.target.value });
+  $('#d-cb').onchange = e => e.target.value && save({ next_callback_at: new Date(e.target.value).toISOString(), callback_type: $('#d-cbt').value });
+  $('#d-cb-clear').onclick = () => { $('#d-cb').value=''; save({ next_callback_at: null }); };
+  $('#n-save').onclick = async () => {
+    const body=$('#n-body').value.trim(); const next=$('#n-next').value;
+    if (!body && !next) return toast('Write a note first');
+    $('#n-save').disabled=true;
+    if (body){
+      const { error } = await sb.from('lead_activities').insert({ lead_id:id, author: state.user.email, kind: $('#n-kind').value, body });
+      if (error){ $('#n-save').disabled=false; return fail(error,'Note not saved'); }
+    }
+    const patch = {};
+    if (next){ const t=new Date(); t.setDate(t.getDate()+Number(next)); t.setHours(11,0,0,0); patch.next_callback_at=t.toISOString(); patch.callback_type=$('#d-cbt').value||'Call'; }
+    if (l.status==='New' && ['Call','WhatsApp','Meeting','Email'].includes($('#n-kind').value) && body) patch.status='Contacted';
+    if (Object.keys(patch).length) await updateLead(id, patch);
+    $('#n-save').disabled=false; $('#n-body').value=''; $('#n-next').value='';
+    openLead(id); toast('Saved');
+  };
+  $('#d-wa').onclick = () => whatsappModal(state.leads.find(x=>x.id===id));
+  $('#d-edit').onclick = () => editModal(state.leads.find(x=>x.id===id));
+  $('#d-del').onclick = async () => {
+    if (!confirmBox) return;
+    confirmBox(`Delete ${l.name} and their history? This can't be undone.`, async () => {
+      const { error } = await sb.from('leads').delete().eq('id', id);
+      if (error) return fail(error,'Not deleted');
+      state.leads = state.leads.filter(x=>x.id!==id); closeDrawer(); render(); toast('Lead deleted');
+    });
+  };
+  loadTimeline(id);
+}
+async function loadTimeline(id){
+  const { data, error } = await sb.from('lead_activities').select('*').eq('lead_id', id).order('created_at',{ascending:false});
+  if (state.openId!==id) return;
+  const tl=$('#d-tl'); if (!tl) return;
+  if (error){ tl.innerHTML=`<li><div class="w">Could not load history</div></li>`; return; }
+  tl.innerHTML = (data||[]).map(a => `<li class="k-${esc(a.kind)}"><div class="w">${esc(a.kind)} · ${esc(fmtDate(a.created_at))} · ${esc(a.author||'')}</div><div class="b">${esc(a.body)}</div></li>`).join('') || `<li><div class="w">No history yet</div></li>`;
+}
+
+// ---------- Modals ----------
+function modal(html){ $('#modal-root').innerHTML = `<div class="modal"><div class="mc">${html}</div></div>`; const m=$('#modal-root .modal'); m.onclick = e => { if (e.target===m) closeModal(); }; return m; }
+function closeModal(){ $('#modal-root').innerHTML=''; }
+function confirmBox(text, onYes){
+  const m = modal(`<h3>Are you sure?</h3><p>${esc(text)}</p><div class="foot"><button class="btn" data-x>Cancel</button><button class="btn pri" data-y style="background:var(--red);border-color:var(--red)">Delete</button></div>`);
+  m.querySelector('[data-x]').onclick = closeModal; m.querySelector('[data-y]').onclick = () => { closeModal(); onYes(); };
+}
+function templates(l){
+  const ev = CONFIG.EVENTS[l.event] || Object.values(CONFIG.EVENTS)[0]; const n = firstName(l.name);
+  const evName = l.event ? l.event.replace(/ \d{1,2} \w{3} \d{4}$/,'') : 'NIA ATLAS';
+  return [
+    ['Thanks for registering', `Hi ${n}, thank you for registering for the ${evName} meeting on ${ev.when} at ${ev.where}.\n\nTo confirm your guest seat, please complete the ${ev.fee} payment here: ${ev.pay}\n\n– NIA Hyderabad`],
+    ['Payment reminder', `Hi ${n}, a quick reminder: your guest seat for ${ev.when} is not confirmed yet. You can pay the ${ev.fee} guest entry here: ${ev.pay}\n\nLet me know if you have any questions. – NIA Hyderabad`],
+    ['Seat confirmed', `Hi ${n}, your payment is received and your seat is confirmed for ${ev.when} at ${ev.where}. Dress code: business formals. Please bring your visiting cards. See you there! – NIA Hyderabad`],
+    ['After the meeting', `Hi ${n}, it was great having you at the NIA meeting. Would you like to talk about joining NIA Hyderabad? I can set up a quick call at a time that suits you. – NIA Hyderabad`],
+    ['General introduction', `Hi ${n}, this is NIA Hyderabad (Network In Action). Thanks for your interest. When is a good time for a quick call to tell you how our business networking meetings work?`],
+  ];
+}
+function whatsappModal(l){
+  const m = modal(`<h3>WhatsApp ${esc(firstName(l.name))}</h3>` + templates(l).map(([t, body], i) =>
+    `<div class="tpl"><b>${esc(t)}</b><p contenteditable="true" data-i="${i}">${esc(body)}</p><a class="btn wa sm" data-send="${i}" target="_blank" rel="noopener">Open in WhatsApp</a></div>`).join('')
+    + `<div class="foot"><button class="btn" data-x>Close</button></div>`);
+  m.querySelector('[data-x]').onclick = closeModal;
+  m.querySelectorAll('[data-send]').forEach(a => {
+    const sync = () => { const txt = m.querySelector(`p[data-i="${a.dataset.send}"]`).innerText; a.href = `https://wa.me/${waNumber(l.phone)}?text=${encodeURIComponent(txt)}`; };
+    sync(); m.querySelector(`p[data-i="${a.dataset.send}"]`).addEventListener('input', sync);
+    a.addEventListener('click', async () => {
+      const t = m.querySelector(`.tpl:nth-of-type(${+a.dataset.send+1}) b`)?.textContent || 'Message';
+      await sb.from('lead_activities').insert({ lead_id:l.id, author: state.user.email, kind:'WhatsApp', body:`Opened WhatsApp: "${t}"` });
+      if (l.status==='New') await updateLead(l.id, { status:'Contacted' });
+      if (state.openId===l.id) loadTimeline(l.id);
+    });
+  });
+}
+function leadForm(l={}){
+  const f = (k, label, type='text', extra='') => `<div class="f"><label>${label}</label><input name="${k}" type="${type}" value="${esc(l[k]||'')}" ${extra}></div>`;
+  return `<div class="grid">${f('name','Full name *','text','required')}${f('phone','Phone / WhatsApp *','tel','required')}${f('email','Email','email')}${f('business','Business name')}${f('category','Business category')}${f('referred_by','Referred by')}
+  <div class="f"><label>Source</label><select name="source">${opts(SOURCES,l.source||'Referral')}</select></div>
+  <div class="f"><label>Event</label><select name="event">${opts(Object.keys(CONFIG.EVENTS),l.event,'None')}</select></div></div>`;
+}
+function readForm(m){ const o={}; m.querySelectorAll('[name]').forEach(i => o[i.name]=i.value.trim()||null); return o; }
+function addModal(){
+  const m = modal(`<h3>Add a lead</h3><form>${leadForm()}<div class="foot"><button type="button" class="btn" data-x>Cancel</button><button class="btn pri">Add lead</button></div></form>`);
+  m.querySelector('[data-x]').onclick = closeModal;
+  m.querySelector('form').onsubmit = async e => {
+    e.preventDefault(); const o=readForm(m);
+    if (!o.name || digits(o.phone).length<10) return toast('Name and a 10-digit phone are required');
+    const dup = state.leads.find(x => digits(x.phone).slice(-10)===digits(o.phone).slice(-10));
+    if (dup && !confirm(`${dup.name} already has this phone number. Add anyway?`)) return;
+    const { data, error } = await sb.from('leads').insert(o).select().single();
+    if (error) return fail(error,'Not added');
+    await sb.from('lead_activities').insert({ lead_id:data.id, author:state.user.email, kind:'System', body:'Added manually' });
+    state.leads.unshift(data); closeModal(); fillFilters(); render(); openLead(data.id);
+  };
+}
+function editModal(l){
+  const m = modal(`<h3>Edit ${esc(l.name)}</h3><form>${leadForm(l)}<div class="foot"><button type="button" class="btn" data-x>Cancel</button><button class="btn pri">Save</button></div></form>`);
+  m.querySelector('[data-x]').onclick = closeModal;
+  m.querySelector('form').onsubmit = async e => { e.preventDefault(); const o=readForm(m); if (!o.name||!o.phone) return toast('Name and phone are required'); const r=await updateLead(l.id,o); if (r){ closeModal(); openLead(l.id); } };
+}
+$('#btn-add').onclick = addModal;
+
+// ---------- CSV ----------
+function parseCSV(text){
+  const rows=[]; let row=[], cell='', q=false;
+  text = text.replace(/^\uFEFF/,'');
+  for (let i=0;i<text.length;i++){
+    const c=text[i];
+    if (q){ if (c==='"'){ if (text[i+1]==='"'){ cell+='"'; i++; } else q=false; } else cell+=c; }
+    else if (c==='"') q=true;
+    else if (c===',' || c==='\t'){ row.push(cell); cell=''; }
+    else if (c==='\n'){ row.push(cell); rows.push(row); row=[]; cell=''; }
+    else if (c!=='\r') cell+=c;
+  }
+  if (cell!=='' || row.length){ row.push(cell); rows.push(row); }
+  return rows.filter(r => r.some(x=>x.trim()!==''));
+}
+const COLS = {
+  name:['name','full name','full_name','lead name'], phone:['phone','phone number','phone_number','whatsapp','mobile','whatsapp number'],
+  email:['email','email address'], business:['business','business name','company','company name','company_name'],
+  category:['category','business category','business type','business_type','industry'], referred_by:['referred by','referred_by','referral'],
+  status:['status','lead status'], created_at:['created','created at','created_at','created_time','submitted at','date'],
+  heard:['how did you hear','heard','how did you hear about us'], owner:['owner / founder','owner','are you the owner'],
+  utm_source:['utm_source'], utm_campaign:['utm_campaign','campaign name','campaign_name'], utm_content:['utm_content','ad name','ad_name'],
+  event:['event'], payment_status:['payment status','payment_status'], notes:['notes','follow-up notes','call notes','note']
+};
+function mapHeader(h){ const k=h.trim().toLowerCase().replace(/[?*]/g,'').trim(); for (const [f, al] of Object.entries(COLS)) if (al.includes(k)) return f; return null; }
+function importModal(){
+  const m = modal(`<h3>Import leads from a CSV</h3>
+  <p style="margin-top:0;color:var(--muted);font-size:14px">Works with the Manus lead export, Meta Leads Center download, or the Google Sheet. Duplicates (same phone number) are skipped.</p>
+  <div class="grid"><div class="f"><label>CSV file</label><input type="file" accept=".csv,text/csv" id="i-file"></div>
+  <div class="f"><label>Mark these leads as source</label><select id="i-src">${opts(SOURCES,'Manus import')}</select></div></div>
+  <div id="i-prev" style="margin-top:14px"></div>
+  <div class="foot"><button class="btn" data-x>Cancel</button><button class="btn pri" id="i-go" disabled>Import</button></div>`);
+  m.querySelector('[data-x]').onclick = closeModal;
+  let ready=[];
+  $('#i-file').onchange = async e => {
+    const f=e.target.files[0]; if (!f) return;
+    const rows=parseCSV(await f.text()); if (rows.length<2) return $('#i-prev').textContent='No rows found.';
+    const map=rows[0].map(mapHeader);
+    const known=new Set(state.leads.map(l=>digits(l.phone).slice(-10)));
+    let dup=0, bad=0; ready=[];
+    for (const r of rows.slice(1)){
+      const o={}; map.forEach((k,i)=>{ if(k && r[i]!=null && r[i].trim()!=='') o[k]=r[i].trim(); });
+      if (o.phone) o.phone=o.phone.replace(/^p:/,'');
+      const d=digits(o.phone).slice(-10);
+      if (!o.name || d.length<10){ bad++; continue; }
+      if (known.has(d)){ dup++; continue; } known.add(d);
+      if (o.status && !STATUSES.includes(o.status)) { const s=STATUSES.find(x=>x.toLowerCase()===o.status.toLowerCase()); o.status = s || 'New'; }
+      if (o.payment_status){ const p=PAYMENTS.find(x=>x.toLowerCase()===o.payment_status.toLowerCase().replace('not paid yet','not paid')); o.payment_status = p || 'Not paid'; }
+      if (o.created_at){ const t=new Date(o.created_at); if (isNaN(t)) delete o.created_at; else o.created_at=t.toISOString(); }
+      ready.push(o);
+    }
+    const found = map.filter(Boolean);
+    $('#i-prev').innerHTML = `<p style="font-size:14px"><b>${ready.length}</b> new leads ready · ${dup} duplicates skipped · ${bad} rows without name/phone skipped</p>
+      <p style="font-size:13px;color:var(--muted)">Columns recognised: ${found.length?esc(found.join(', ')):'none'}</p>
+      <table class="mini"><tr><th>Name</th><th>Phone</th><th>Business</th><th>Status</th></tr>${ready.slice(0,5).map(o=>`<tr><td>${esc(o.name)}</td><td>${esc(o.phone)}</td><td>${esc(o.business||'')}</td><td>${esc(o.status||'New')}</td></tr>`).join('')}</table>`;
+    $('#i-go').disabled = !ready.length;
+  };
+  $('#i-go').onclick = async () => {
+    $('#i-go').disabled=true; $('#i-go').textContent='Importing…';
+    const src=$('#i-src').value; let done=0;
+    for (let i=0;i<ready.length;i+=200){
+      const batch = ready.slice(i,i+200).map(({notes, ...o}) => ({ ...o, source: src }));
+      const { data, error } = await sb.from('leads').insert(batch).select('id');
+      if (error){ fail(error,'Import stopped'); break; }
+      const acts = data.map((d,j) => ({ lead_id:d.id, author:state.user.email, kind:'System', body: `Imported from CSV (${src})` + (ready[i+j].notes ? `\nNotes: ${ready[i+j].notes}` : '') }));
+      await sb.from('lead_activities').insert(acts);
+      done += data.length;
+    }
+    closeModal(); toast(`Imported ${done} leads`); loadAll();
+  };
+}
+$('#btn-import').onclick = importModal;
+$('#btn-export').onclick = () => {
+  const ls=filtered(); const cols=['created_at','name','phone','email','business','category','owner','heard','referred_by','source','event','status','payment_status','assignee','next_callback_at','callback_type','utm_source','utm_campaign','utm_content'];
+  const q = v => { v = v==null ? '' : String(v); if (/^[=+\-@]/.test(v)) v="'"+v; return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; };
+  const csv = '\uFEFF' + [cols.join(','), ...ls.map(l=>cols.map(c=>q(c.endsWith('_at')&&l[c]?new Date(l[c]).toLocaleString('en-IN'):l[c])).join(','))].join('\n');
+  const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'})); a.download=`nia-hyd-leads-${new Date().toISOString().slice(0,10)}.csv`; a.click();
+};
+
+// ---------- Admins ----------
+function adminsModal(){
+  const m = modal(`<h3>Admins</h3><p style="margin-top:0;color:var(--muted);font-size:14px">People on this list can sign in and see every lead.</p>
+  <table class="mini">${state.admins.map(a=>`<tr><td>${esc(a.name||'')}</td><td>${esc(a.email)}</td><td style="text-align:right">${a.email===state.user.email.toLowerCase()?'<span style="color:var(--muted)">you</span>':`<button class="btn sm" data-rm="${esc(a.email)}">Remove</button>`}</td></tr>`).join('')}</table>
+  <form class="grid" style="margin-top:14px"><div class="f"><label>Name</label><input name="name"></div><div class="f"><label>Email *</label><input name="email" type="email" required></div>
+  <div style="grid-column:1/-1;display:flex;justify-content:flex-end;gap:10px"><button type="button" class="btn" data-x>Close</button><button class="btn pri">Add admin</button></div></form>`);
+  m.querySelector('[data-x]').onclick = closeModal;
+  m.querySelectorAll('[data-rm]').forEach(b => b.onclick = async () => { const { error } = await sb.from('admins').delete().eq('email', b.dataset.rm); if (error) return fail(error); state.admins=state.admins.filter(a=>a.email!==b.dataset.rm); adminsModal(); });
+  m.querySelector('form').onsubmit = async e => { e.preventDefault(); const o=readForm(m); o.email=o.email.toLowerCase();
+    const { data, error } = await sb.from('admins').insert(o).select().single(); if (error) return fail(error,'Not added'); state.admins.push(data); adminsModal(); toast('Admin added. They can now sign in with that email.'); };
+}
+$('#btn-admins').onclick = adminsModal;
+
+boot();
+setInterval(() => { if (state.user && !state.openId && !$('#modal-root').innerHTML) loadAll(); }, 120000);
+</script>
+</body>
+</html>
