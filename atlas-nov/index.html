@@ -10,6 +10,12 @@
 <meta property="og:image" content="https://s3.ap-south-1.amazonaws.com/rzp-prod-merchant-assets/payment-link/description/ttgtk1oqikprl2.jpeg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#041C43">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1603187984611018');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1603187984611018&ev=PageView&noscript=1" alt=""></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -106,6 +112,35 @@ display:none;align-items:center;justify-content:space-between;gap:12px;z-index:1
 .sticky .t{color:#fff;font-family:Poppins;font-weight:600;font-size:14px;line-height:1.25}
 .sticky .t small{display:block;font-family:Lato;font-weight:400;color:rgba(255,255,255,.7);font-size:12.5px}
 .sticky .btn{padding:12px 18px;font-size:15px}
+.register{background:var(--paper);padding-top:56px}
+.reg-card{background:var(--card);border:1px solid #E6E9EF;border-radius:20px;padding:32px;max-width:760px;margin:0 auto;box-shadow:0 20px 50px rgba(4,28,67,.08)}
+.reg-head .sec-title{margin-bottom:14px}
+.reg-steps{display:flex;gap:10px;list-style:none;padding:0;margin:0 0 22px}
+.reg-steps li{display:flex;align-items:center;gap:8px;font-family:Poppins;font-weight:600;font-size:14px;color:var(--muted);background:#F1F3F7;border-radius:999px;padding:6px 14px 6px 6px}
+.reg-steps li span{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#D9DEE7;color:#fff;font-size:12px}
+.reg-steps li.on{color:var(--navy);background:#FDEBDF}
+.reg-steps li.on span{background:var(--orange)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+.reg-card label{display:flex;flex-direction:column;gap:6px;font-family:Poppins;font-weight:600;font-size:14px;color:var(--navy)}
+.reg-card input,.reg-card select{font:inherit;font-family:Lato,system-ui,sans-serif;font-weight:400;font-size:16px;color:var(--ink);border:1.5px solid #D5DAE3;border-radius:10px;padding:12px 14px;background:#fff;width:100%}
+.reg-card input:focus,.reg-card select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(62,150,219,.18)}
+.reg-card .bad{border-color:#D93025}
+.owner{border:0;padding:0;margin:16px 0 0;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.owner legend{font-family:Poppins;font-weight:600;font-size:14px;color:var(--navy);margin-bottom:8px;padding:0}
+.reg-card .radio{flex-direction:row;align-items:center;gap:8px;font-family:Lato;font-weight:400;font-size:16px;color:var(--ink)}
+.reg-card .radio input{width:18px;height:18px;padding:0;accent-color:var(--orange)}
+.ref{margin-top:14px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.consent{font-size:13px;color:var(--muted);margin:16px 0 0}
+.err{color:#D93025;font-weight:700;font-size:14px;min-height:20px;margin:8px 0}
+.btn-block{width:100%;justify-content:center}
+.btn[disabled]{opacity:.6;pointer-events:none}
+.pay-step{text-align:center;padding:8px 0}
+.pay-step .tick{width:56px;height:56px;border-radius:50%;background:#E7F6EC;color:#1E8E3E;display:grid;place-items:center;margin:0 auto 14px}
+.pay-step h3{font-size:22px;color:var(--navy);margin-bottom:8px}
+.pay-step p{color:var(--muted);margin:0 0 18px}
+.pay-step .small{font-size:13px;margin:12px 0 0}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}.reg-card{padding:22px}}
 @media (max-width:880px){
 .hero-grid{grid-template-columns:1fr;gap:32px;margin-top:32px}
 .poster{order:-1}
@@ -161,11 +196,11 @@ section{padding:48px 0}
 </li>
 </ul>
 <div class="cta-row">
-<a class="btn btn-primary" href="https://rzp.io/rzp/NIAHYDNOV26" target="_blank" rel="noopener">Reserve my seat · ₹2,600
+<a class="btn btn-primary" href="#register">Reserve my seat · ₹2,600
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 <a class="btn btn-ghost" href="https://wa.me/917997994493?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20NIA%20ATLAS%20meeting%20on%2011%20Nov" target="_blank" rel="noopener">Ask on WhatsApp</a>
 </div>
-<p class="price-note">Guest entry ₹2,600 per person · Secure payment via Razorpay</p>
+<p class="price-note">Guest entry ₹2,600 per person · Register in 1 minute, then pay securely via Razorpay</p>
 </div>
 <div class="poster">
 <img src="https://s3.ap-south-1.amazonaws.com/rzp-prod-merchant-assets/payment-link/description/ttgtk1oqikprl2.jpeg"
@@ -182,14 +217,59 @@ alt="NIA ATLAS November Monthly Meeting poster: Wednesday 11 Nov 2026, 6 PM foll
 </div>
 </header>
 <main>
+<section class="register" id="register">
+<div class="wrap">
+<div class="reg-card">
+<div class="reg-head">
+<div class="kicker">Reserve your guest seat</div>
+<h2 class="sec-title">Register for 11 November</h2>
+<ol class="reg-steps"><li class="on" id="st1"><span>1</span>Your details</li><li id="st2"><span>2</span>Pay ₹2,600</li></ol>
+</div>
+<form id="reg-form" novalidate>
+<div class="grid2">
+<label>Full name*<input name="name" autocomplete="name" required maxlength="80"></label>
+<label>WhatsApp number*<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="10-digit mobile" maxlength="16"></label>
+<label>Email*<input name="email" type="email" autocomplete="email" required maxlength="100"></label>
+<label>Business name*<input name="business" autocomplete="organization" required maxlength="100"></label>
+<label>Business category*<input name="category" required placeholder="e.g. Interior design, CA, Real estate" maxlength="80"></label>
+<label>How did you hear about us?*
+<select name="heard" required>
+<option value="">Select</option>
+<option>Instagram / Facebook</option>
+<option>Referred by a member</option>
+<option>WhatsApp message</option>
+<option>Other</option>
+</select></label>
+</div>
+<fieldset class="owner"><legend>Are you the owner or founder?*</legend>
+<label class="radio"><input type="radio" name="owner" value="Yes" required> Yes</label>
+<label class="radio"><input type="radio" name="owner" value="No"> No</label>
+</fieldset>
+<label class="ref" id="ref-wrap">Referred by (member name)<input name="referred" maxlength="80"></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="consent">By registering, you agree that NIA Hyderabad may contact you on WhatsApp, phone or email about this meeting.</p>
+<p class="err" id="reg-err" role="alert"></p>
+<button class="btn btn-primary btn-block" type="submit" id="reg-btn">Continue to payment
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</form>
+<div class="pay-step" id="pay-step" hidden>
+<div class="tick" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></div>
+<h3>Thanks<span id="pay-name"></span>! Your details are saved.</h3>
+<p>One last step: pay the ₹2,600 guest entry to confirm your seat for Wednesday, 11 November.</p>
+<a class="btn btn-primary btn-block" id="pay-btn" href="https://rzp.io/rzp/NIAHYDNOV26" target="_blank" rel="noopener">Pay ₹2,600 and confirm my seat</a>
+<p class="small">Secure payment via Razorpay. Our team will WhatsApp you to confirm your seat.</p>
+</div>
+</div>
+</div>
+</section>
 <section>
 <div class="wrap">
 <div class="kicker">How it works</div>
 <h2 class="sec-title">Three steps to your guest seat</h2>
-<p class="sec-sub">Book online in a couple of minutes. Our team takes it from there.</p>
+<p class="sec-sub">Register below, pay to confirm, and our team takes it from there.</p>
 <div class="steps">
-<div class="step"><h3>Reserve and pay</h3><p>Fill in your details and pay the ₹2,600 guest entry securely on Razorpay.</p></div>
-<div class="step"><h3>We confirm on WhatsApp</h3><p>Our team contacts you on WhatsApp to confirm your seat and share the details.</p></div>
+<div class="step"><h3>Register your details</h3><p>Tell us about you and your business. It takes about a minute.</p></div>
+<div class="step"><h3>Pay ₹2,600 to confirm</h3><p>Pay the guest entry securely on Razorpay. Our team then confirms your seat on WhatsApp.</p></div>
 <div class="step"><h3>Meet, connect, grow</h3><p>Join us on Wednesday, 11 November at 6:00 PM, followed by dinner.</p></div>
 </div>
 </div>
@@ -237,7 +317,7 @@ alt="NIA ATLAS November Monthly Meeting poster: Wednesday 11 Nov 2026, 6 PM foll
 <h2>Reserve your guest seat for 11 November</h2>
 <p>Wednesday · 6:00 PM · Novotel Convention Centre, HITEC City</p>
 </div>
-<a class="btn btn-white" href="https://rzp.io/rzp/NIAHYDNOV26" target="_blank" rel="noopener">Reserve my seat · ₹2,600</a>
+<a class="btn btn-white" href="#register">Reserve my seat · ₹2,600</a>
 </div>
 </div>
 </section>
@@ -253,8 +333,39 @@ alt="NIA ATLAS November Monthly Meeting poster: Wednesday 11 Nov 2026, 6 PM foll
 </footer>
 <div class="sticky" role="region" aria-label="Reserve your seat">
 <div class="t">Wed, 11 Nov · 6:00 PM<small>Novotel, HITEC City · ₹2,600</small></div>
-<a class="btn btn-primary" href="https://rzp.io/rzp/NIAHYDNOV26" target="_blank" rel="noopener">Reserve seat</a>
+<a class="btn btn-primary" href="#register">Reserve seat</a>
 </div>
+<script>
+(function(){
+var ENDPOINT='https://script.google.com/macros/s/AKfycbyHKfu8yRSZC2QcDL0s3ANy1-lB1UOXow_CpquT75fKpQ39rAk8eqNC2s2KWqlT2XXPgg/exec';
+var form=document.getElementById('reg-form'), err=document.getElementById('reg-err'), btn=document.getElementById('reg-btn');
+var q=new URLSearchParams(location.search);
+var heard=form.elements.heard, refWrap=document.getElementById('ref-wrap');
+function track(){ try{ return window.fbq ? fbq.apply(null, arguments) : null; }catch(e){} }
+function digits(s){ return (s||'').replace(/\D/g,''); }
+form.addEventListener('submit', function(e){
+e.preventDefault(); err.textContent='';
+var f=form.elements, bad=[];
+['name','phone','email','business','category','heard'].forEach(function(n){ f[n].classList.remove('bad'); if(!f[n].value.trim()) bad.push(f[n]); });
+var ph=digits(f.phone.value); if(ph.length===12 && ph.indexOf('91')===0) ph=ph.slice(2);
+if(f.phone.value.trim() && !/^[6-9]\d{9}$/.test(ph)) bad.push(f.phone);
+if(f.email.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim())) bad.push(f.email);
+var owner=form.querySelector('input[name=owner]:checked');
+if(bad.length || !owner){ bad.forEach(function(x){x.classList.add('bad');}); err.textContent = !owner && !bad.length ? 'Please tell us if you are the owner or founder.' : 'Please check the highlighted fields.'; if(bad[0]) bad[0].focus(); return; }
+btn.disabled=true; btn.firstChild.textContent='Saving… ';
+var data=new URLSearchParams({event:'NIA ATLAS 11 Nov 2026', name:f.name.value.trim(), phone:'+91 '+ph, email:f.email.value.trim(), business:f.business.value.trim(), category:f.category.value.trim(), owner:owner.value, heard:f.heard.value, referred:f.referred.value.trim(), website:f.website.value, utm_source:q.get('utm_source')||'', utm_campaign:q.get('utm_campaign')||'', utm_content:q.get('utm_content')||''});
+fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:data}).catch(function(){}).then(function(){
+track('track','Lead',{content_name:'NIA ATLAS 11 Nov 2026', value:2600, currency:'INR'});
+form.hidden=true;
+document.getElementById('pay-name').textContent=', '+f.name.value.trim().split(' ')[0];
+document.getElementById('pay-step').hidden=false;
+document.getElementById('st1').classList.remove('on'); document.getElementById('st2').classList.add('on');
+document.getElementById('register').scrollIntoView({behavior:'smooth',block:'start'});
+});
+});
+document.getElementById('pay-btn').addEventListener('click', function(){ track('track','InitiateCheckout',{value:2600, currency:'INR'}); });
+})();
+</script>
 <script>
 (function(){
 var target = new Date('2026-11-11T18:00:00+05:30').getTime();
