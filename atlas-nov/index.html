@@ -337,6 +337,7 @@ alt="NIA ATLAS November Monthly Meeting poster: Wednesday 11 Nov 2026, 6 PM foll
 </div>
 <script>
 (function(){
+var SUPA_URL='https://jtmvvcwzsddhcvuhllou.supabase.co', SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp0bXZ2Y3d6c2RkaGN2dWhsbG91Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMyODEzMTQsImV4cCI6MjEwODg1NzMxNH0.ag-VzEfb6wXK1xShsMM7YmuAqgUGwdYQrmxsuTcJ0_I';
 var ENDPOINT='https://script.google.com/macros/s/AKfycbyHKfu8yRSZC2QcDL0s3ANy1-lB1UOXow_CpquT75fKpQ39rAk8eqNC2s2KWqlT2XXPgg/exec';
 var form=document.getElementById('reg-form'), err=document.getElementById('reg-err'), btn=document.getElementById('reg-btn');
 var q=new URLSearchParams(location.search);
@@ -354,7 +355,10 @@ var owner=form.querySelector('input[name=owner]:checked');
 if(bad.length || !owner){ bad.forEach(function(x){x.classList.add('bad');}); err.textContent = !owner && !bad.length ? 'Please tell us if you are the owner or founder.' : 'Please check the highlighted fields.'; if(bad[0]) bad[0].focus(); return; }
 btn.disabled=true; btn.firstChild.textContent='Saving… ';
 var data=new URLSearchParams({event:'NIA ATLAS 11 Nov 2026', name:f.name.value.trim(), phone:'+91 '+ph, email:f.email.value.trim(), business:f.business.value.trim(), category:f.category.value.trim(), owner:owner.value, heard:f.heard.value, referred:f.referred.value.trim(), website:f.website.value, utm_source:q.get('utm_source')||'', utm_campaign:q.get('utm_campaign')||'', utm_content:q.get('utm_content')||''});
-fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:data}).catch(function(){}).then(function(){
+var sheetBackup=function(){ return fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:data}).catch(function(){}); };
+var payload={}; data.forEach(function(v,k){ payload[k]=v; });
+fetch(SUPA_URL+'/rest/v1/rpc/submit_signup',{method:'POST',headers:{'apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY,'Content-Type':'application/json'},body:JSON.stringify({p:payload})})
+.then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); }).then(function(j){ if(!j || j.ok===false) return sheetBackup(); }, sheetBackup).then(function(){
 track('track','Lead',{content_name:'NIA ATLAS 11 Nov 2026', value:2600, currency:'INR'});
 form.hidden=true;
 document.getElementById('pay-name').textContent=', '+f.name.value.trim().split(' ')[0];
